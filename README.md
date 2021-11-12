@@ -1,7 +1,7 @@
 Springboot-Jpa-ChartTest
 =============
 
-# DB 연결 방법
+###### DB 연결 방법
 
 ```mariadb
 create user 'test'@'%' identified by 'test1234';
