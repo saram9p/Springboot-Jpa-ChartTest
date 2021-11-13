@@ -41,7 +41,7 @@
                                         <i class="fas fa-chart-area me-1"></i>
                                         일별 방문자
                                     </div>
-                                    <div class="card-body" id="AreaChartContainer"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+                                    <div class="card-body" id="AreaChartContainer" style="position: relative; height:40%; width:100%"><canvas id="myAreaChart"></canvas></div>
                                 </div>
                             </div>
                             <div class="col-xl-6">
@@ -50,7 +50,7 @@
                                         <i class="fas fa-chart-bar me-1"></i>
                                         월별 방문자
                                     </div>
-                                    <div class="card-body" id="BarChartContainer"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+                                    <div class="card-body" id="BarChartContainer" style="position: relative; height:40%; width:100%"><canvas id="myBarChart"></canvas></div>
                                 </div>
                             </div>
                         </div>
@@ -59,32 +59,35 @@
 
             </div>
         </div>
-	<!--<input type="hidden" id="tJson" value=${tJson } />-->
-	<!--<input type="hidden" id="mJson" value=${mJson } />-->
 
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="/admin/js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="/admin/assets/demo/chart-function.js"></script>
         <script src="/admin/assets/demo/chart-area-demo.js"></script>
         <script src="/admin/assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
         <script src="/admin/js/datatables-simple-demo.js"></script>
 
-	<script>
-	
-	getAreaChartData();
+<script>
+// 데이터 불러오기
 	getBarChartData();
-	
+	getAreaChartData();
+</script>
+
+<script>
+
+// 3초마다 데이터 불러오기
 	setInterval(function(){
 		getAreaChartData();
 	}, 3000)
-	
+		
 	setInterval(function(){
 		getBarChartData();
 	}, 3000)
 	
-	</script>
+</script>
 
 </body>
 </html> 
